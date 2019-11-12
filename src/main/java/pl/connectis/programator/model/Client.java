@@ -1,5 +1,8 @@
+package pl.connectis.programator.model;
+
+import pl.connectis.programator.util.UUUGenerator;
+
 import java.math.BigDecimal;
-import java.util.Random;
 
 public class Client {
     private long id;

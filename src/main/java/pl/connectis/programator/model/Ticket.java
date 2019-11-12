@@ -1,3 +1,7 @@
+package pl.connectis.programator.model;
+
+import pl.connectis.programator.util.UUUGenerator;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 

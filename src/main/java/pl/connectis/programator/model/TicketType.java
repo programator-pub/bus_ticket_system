@@ -1,3 +1,5 @@
+package pl.connectis.programator.model;
+
 public enum TicketType {
 
     STUDENT("Studencki",50.00),
