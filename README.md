@@ -3,6 +3,7 @@ Bus Ticket System
 -zamodelowac klienta  
 -zamodelowac bilet (rozne warianty: ulgowy, studencki, normalny, senior)  
 -zamodelowac trase przejazdu  
+
 -dodawanie klienta  
 -kupowanie biletu na konkretna trase przez klienta  
 -polaczenia autobusowe sa hardkodowane  
