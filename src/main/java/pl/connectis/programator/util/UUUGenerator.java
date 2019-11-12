@@ -1,3 +1,5 @@
+package pl.connectis.programator.util;
+
 public class UUUGenerator {
     private static long clientId;
     private static long ticketId;

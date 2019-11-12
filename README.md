@@ -1,5 +1,5 @@
 # bus-ticket-system  
-Bus Ticket System  
+Bus pl.connectis.programator.model.Ticket System  
 -zamodelowac klienta  
 -zamodelowac bilet (rozne warianty: ulgowy, studencki, normalny, senior)  
 -zamodelowac trase przejazdu  
@@ -32,3 +32,18 @@ git checkout -b "nowy_feature_branch" "branch_od_którego_się_odbijamy"
 git checkout -b "user_interface" "origin/master"  
 
 standardowa scieżka: commit -> rebase -> push  
+
+-zamodelowac klienta
+-zamodelowac pracownika
+-zamodelowac bilet (rozne warianty: ulgowy, studencki, normalny, senior)
+-zamodelowac trase przejazdu
+-jako pracownik mam możliwość zarejestrować klienta
+-jako user mam możliwość stworzyć konto
+-jako klient mam możliwość kupienia biletu na daną trasę
+-polaczenia autobusowe sa hardkodowane  (ENUMy)
+-jako pracownik mam możliwość wyświetlić klientów
+-jako user mam możliwość wyświetlić połączenia
+-jako user mam możliwość wyświetlić wszystkie dostępne bilety
+-jako pracownik mam możliwość dodać nowy przejazdu
+-jako pracownik mam możliwość modyfikować istniejące warianty biletu
+-jako pracownik mam możliwość modyfikować dane klientów
