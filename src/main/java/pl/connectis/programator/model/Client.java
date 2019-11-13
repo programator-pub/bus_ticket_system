@@ -1,15 +1,13 @@
 package pl.connectis.programator.model;
 
 import pl.connectis.programator.util.UUUGenerator;
-
-import java.math.BigDecimal;
+import java.util.List;
 
 public class Client {
     private long id;
     private String firstName;
     private String secondName;
-    private Ticket tickets;
-    private BigDecimal balance;
+    private List<Ticket> tickets;
 
     public Client(String firstName, String secondName) {
         this.id = UUUGenerator.getNextId();
@@ -29,43 +27,21 @@ public class Client {
         return secondName;
     }
 
-    public Ticket getTickets() {
+    public List<Ticket> getTickets() {
         return tickets;
     }
 
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public void setTickets(Ticket tickets) {
+    public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
 
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Client client = (Client) o;
-
-        if (id != client.id) return false;
-        if (firstName != null ? !firstName.equals(client.firstName) : client.firstName != null) return false;
-        if (secondName != null ? !secondName.equals(client.secondName) : client.secondName != null) return false;
-        if (tickets != null ? !tickets.equals(client.tickets) : client.tickets != null) return false;
-        return balance != null ? balance.equals(client.balance) : client.balance == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (secondName != null ? secondName.hashCode() : 0);
-        result = 31 * result + (tickets != null ? tickets.hashCode() : 0);
-        result = 31 * result + (balance != null ? balance.hashCode() : 0);
-        return result;
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", tickets=" + tickets +
+                '}';
     }
 }

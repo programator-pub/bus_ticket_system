@@ -1,11 +1,13 @@
 package pl.connectis.programator.model;
 
+import java.time.LocalDateTime;
+
 public enum TicketType {
 
-    STUDENT("Studencki",50.00),
-    SENIOR("Senior",65.00),
-    PUPIL("Szkolny",55.00),
-    NORMAL("Normlany",0.00);
+    STUDENT("Studencki",0.50),
+    SENIOR("Senior",0.65),
+    PUPIL("Szkolny",0.55),
+    NORMAL("Normlany",1.00);
 
     private String type;
     private double discount;
@@ -21,5 +23,13 @@ public enum TicketType {
 
     public double getDiscount() {
         return discount;
+    }
+
+    @Override
+    public String toString() {
+        return "TicketType{" +
+                "type='" + type + '\'' +
+                ", discount=" + discount +
+                '}';
     }
 }
