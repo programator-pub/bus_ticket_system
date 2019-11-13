@@ -1,6 +1,8 @@
 package pl.connectis.programator.model;
 
 import pl.connectis.programator.util.UUUGenerator;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
@@ -13,6 +15,7 @@ public class Client {
         this.id = UUUGenerator.getNextClientId();
         this.firstName = firstName;
         this.secondName = secondName;
+        this.tickets = new ArrayList<>();
     }
 
     public long getId() {
@@ -32,7 +35,11 @@ public class Client {
     }
 
     public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
+        this.tickets.addAll(tickets);
+    }
+
+    public void addNewTicket(Ticket ticket) {
+        this.tickets.add(ticket);
     }
 
     public void setFirstName(String firstName) {

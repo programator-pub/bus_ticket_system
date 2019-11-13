@@ -14,7 +14,7 @@ public interface WorkerService {
 
     Client updateClientData(Client client, String firstName, String secondName) throws Exception;
 
-    Client sellTicketToClient(Client client, Ticket ticket);
+    Client sellTicketToClient(Client client, Ticket ticket) throws Exception;
 
     List<Client> getAllClients();
 

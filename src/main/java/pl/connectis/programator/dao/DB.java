@@ -19,9 +19,13 @@ public class DB {
         return clientList;
     }
 
-    public static Client setClientList(Client newClient) {
+    public static Client addClientToList(Client newClient) {
         clientList.add(newClient);
         return newClient;
+    }
+
+    public static void deleteClientFromList(Client client) {
+        clientList.remove(client);
     }
 
     public static List<Worker> getWorkerList() {
@@ -46,7 +50,7 @@ public class DB {
         return routeList;
     }
 
-    public static Route setRouteList(Route newRoute) {
+    public static Route addRouteToList(Route newRoute) {
         routeList.add(newRoute);
         return newRoute;
     }
