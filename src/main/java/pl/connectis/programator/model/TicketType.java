@@ -1,7 +1,5 @@
 package pl.connectis.programator.model;
 
-import java.time.LocalDateTime;
-
 public enum TicketType {
 
     STUDENT("Studencki",0.50),

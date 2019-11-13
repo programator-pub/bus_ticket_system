@@ -1,16 +1,15 @@
 package pl.connectis.programator.model;
 
 import pl.connectis.programator.util.UUUGenerator;
-import java.util.List;
 
-public class Client {
+public class Worker {
+
     private long id;
     private String firstName;
     private String secondName;
-    private List<Ticket> tickets;
 
-    public Client(String firstName, String secondName) {
-        this.id = UUUGenerator.getNextClientId();
+    public Worker(String firstName, String secondName) {
+        this.id = UUUGenerator.getNextWorkerId();
         this.firstName = firstName;
         this.secondName = secondName;
     }
@@ -27,29 +26,12 @@ public class Client {
         return secondName;
     }
 
-    public List<Ticket> getTickets() {
-        return tickets;
-    }
-
-    public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
     @Override
     public String toString() {
-        return "Client{" +
+        return "Worker{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
-                ", tickets=" + tickets +
                 '}';
     }
 }

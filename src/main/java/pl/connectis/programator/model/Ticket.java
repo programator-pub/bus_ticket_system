@@ -3,21 +3,21 @@ package pl.connectis.programator.model;
 import pl.connectis.programator.util.UUUGenerator;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Ticket {
     private long id;
     private TicketType type;
     private BigDecimal price;
-    private LocalDate validUntil;
+    private LocalDateTime validUntil;
     private Route route;
 
-    public Ticket(TicketType type, LocalDate validUntil, Route route) {
+    public Ticket(TicketType type, ValidUntil validUntil, Route route) {
         this.id = UUUGenerator.getNextTicketId();
         this.type = type;
         this.price = route.getPrice().multiply(new BigDecimal(type.getDiscount()));
-        this.validUntil = validUntil;
+        this.validUntil = validUntil.getValidUntil();
         this.route = route;
     }
 
@@ -33,7 +33,7 @@ public class Ticket {
         return price;
     }
 
-    public LocalDate getValidUntil() {
+    public LocalDateTime getValidUntil() {
         return validUntil;
     }
 
@@ -41,5 +41,14 @@ public class Ticket {
         return route;
     }
 
-
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", type=" + type +
+                ", price=" + price +
+                ", validUntil=" + validUntil +
+                ", route=" + route +
+                '}';
+    }
 }
