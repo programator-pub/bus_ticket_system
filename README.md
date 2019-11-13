@@ -33,17 +33,16 @@ git checkout -b "user_interface" "origin/master"
 
 standardowa scieżka: commit -> rebase -> push  
 
--zamodelowac klienta [x] 
--zamodelowac pracownika [x] 
--zamodelowac bilet (rozne warianty: ulgowy, studencki, normalny, senior) [x] 
--zamodelowac trase przejazdu [x] 
--jako pracownik mam możliwość zarejestrować klienta
--jako user mam możliwość stworzyć konto
--jako klient mam możliwość kupienia biletu na daną trasę
--polaczenia autobusowe sa hardkodowane  (ENUMy)
--jako pracownik mam możliwość wyświetlić klientów
--jako user mam możliwość wyświetlić połączenia
--jako user mam możliwość wyświetlić wszystkie dostępne bilety
--jako pracownik mam możliwość dodać nowy przejazd 
--jako pracownik mam możliwość modyfikować dane klientów
--jako pracownik mam możliwość sprzedać bilet klientowi 
+-zamodelowac klienta [x]  
+-zamodelowac pracownika [x]  
+-zamodelowac bilet (rozne warianty: ulgowy, studencki, normalny, senior) [x]   
+-zamodelowac trase przejazdu [x]  
+-jako pracownik mam możliwość zarejestrować klienta [x]  
+-jako user mam możliwość stworzyć konto [Mateusz]  
+-jako klient mam możliwość kupienia biletu na daną trasę [Marek]  
+-jako pracownik mam możliwość wyświetlić klientów [x]   
+-jako user mam możliwość wyświetlić połączenia [Łukasz]  
+-jako user mam możliwość wyświetlić wszystkie dostępne bilety [Piotr]  
+-jako pracownik mam możliwość dodać nowy przejazd [Mikolaj]  
+-jako pracownik mam możliwość modyfikować dane klientów [Kamil]  
+-jako pracownik mam możliwość sprzedać bilet klientowi [Adam]  
