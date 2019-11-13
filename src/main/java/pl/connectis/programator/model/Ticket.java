@@ -7,16 +7,16 @@ import java.time.LocalDate;
 
 
 public class Ticket {
-    long id;
-    TicketType type;
-    BigDecimal price;
-    LocalDate validUntil;
-    Route route;
+    private long id;
+    private TicketType type;
+    private BigDecimal price;
+    private LocalDate validUntil;
+    private Route route;
 
     public Ticket(TicketType type, LocalDate validUntil, Route route) {
         this.id = UUUGenerator.getNextTicketId();
         this.type = type;
-//        this.price = price;
+        this.price = route.getPrice().multiply(new BigDecimal(type.getDiscount()));
         this.validUntil = validUntil;
         this.route = route;
     }
