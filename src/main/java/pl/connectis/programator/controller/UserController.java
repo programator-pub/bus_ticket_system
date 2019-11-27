@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.connectis.programator.model.Client;
+import pl.connectis.programator.model.Route;
 import pl.connectis.programator.model.Ticket;
 import pl.connectis.programator.service.impl.UserServiceImpl;
 
@@ -21,9 +22,18 @@ public class UserController {
         this.userService = new UserServiceImpl();
     }
 
-    @GetMapping("/listMyTickets")
+    @GetMapping("/list-my-tickets")
     public ResponseEntity<List<Ticket>> getAllMyTickets(@RequestBody Client client) {
         return ResponseEntity.ok(this.userService.getAllMyTickets());
     }
 
+    @GetMapping("/route-list")
+    public ResponseEntity<List<Route>> getAllRoutesList() {
+        return ResponseEntity.ok(this.userService);
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "test";
+    }
 }
