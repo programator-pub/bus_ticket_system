@@ -1,12 +1,12 @@
 package pl.connectis.programator.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.connectis.programator.model.Client;
-import pl.connectis.programator.model.Route;
 import pl.connectis.programator.model.Ticket;
 import pl.connectis.programator.service.impl.UserServiceImpl;
 
@@ -28,8 +28,8 @@ public class UserController {
     }
 
     @GetMapping("/route-list")
-    public ResponseEntity<List<Route>> getAllRoutesList() {
-        return ResponseEntity.ok(this.userService);
+    public HttpStatus getAllRoutesList() {
+        return HttpStatus.ACCEPTED;
     }
 
     @GetMapping("/test")

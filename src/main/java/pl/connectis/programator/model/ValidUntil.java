@@ -1,6 +1,7 @@
 package pl.connectis.programator.model;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public enum ValidUntil {
 
@@ -8,7 +9,8 @@ public enum ValidUntil {
     _24H(LocalDateTime.now().plusHours(24)),
     _30D(LocalDateTime.now().plusDays(30));
 
-    private LocalDateTime validUntil;
+
+    public LocalDateTime validUntil;
 
     ValidUntil() {
     }

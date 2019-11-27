@@ -3,10 +3,11 @@ package pl.connectis.programator.service.impl;
 import pl.connectis.programator.dao.DB;
 import pl.connectis.programator.model.Client;
 import pl.connectis.programator.model.Ticket;
+import pl.connectis.programator.service.ClientService;
 
 import java.util.List;
 
-public class ClientServiceImpl {
+public class ClientServiceImpl implements ClientService {
 
     public Client buyTicket(Client client, Ticket ticket) throws Exception{
         Client clientCustomer = this.getClient(client);
@@ -27,4 +28,8 @@ public class ClientServiceImpl {
         return DB.getClientList();
     }
 
+    @Override
+    public Client registerClient(String firstName, String secondName) {
+        return DB.addClientToList(new Client(firstName, secondName));
+    }
 }

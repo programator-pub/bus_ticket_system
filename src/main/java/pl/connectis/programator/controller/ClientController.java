@@ -1,11 +1,9 @@
 package pl.connectis.programator.controller;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.connectis.programator.model.Client;
-import pl.connectis.programator.model.Ticket;
 import pl.connectis.programator.service.impl.ClientServiceImpl;
 import pl.connectis.programator.service.impl.TicketService;
 
@@ -37,4 +35,12 @@ public class ClientController {
     public ResponseEntity<List<Client>> getAllClients() {
         return ResponseEntity.ok(this.clientService.getAll());
     }
+
+    @PostMapping("/register")
+    public ResponseEntity<Client> registerNewClient(@RequestParam String firstName, @RequestParam String secondName) {
+        return ResponseEntity.ok(this.clientService.registerClient(firstName, secondName));
+    }
+
+
+
 }

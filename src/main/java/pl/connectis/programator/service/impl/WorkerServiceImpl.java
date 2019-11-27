@@ -7,6 +7,7 @@ import pl.connectis.programator.model.Ticket;
 import pl.connectis.programator.service.WorkerService;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +39,7 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
-    public Route addNewRoute(BigDecimal price, String start, String destination, LocalDateTime tripDuration) {
+    public Route addNewRoute(BigDecimal price, String start, String destination, Duration tripDuration) {
         return null;
     }
 }
