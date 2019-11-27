@@ -19,7 +19,7 @@ public class SupervisiorServiceImpl implements WorkerService {
     }
 
     @Override
-    public Client updateClientData(Client client, String firstName, String secondName) throws Exception{
+    public Client updateClientData(Client client, String firstName, String secondName) throws Exception {
         Client clientToUpdate = this.getClient(client);
         DB.deleteClientFromList(client);
         clientToUpdate.setFirstName(firstName);
@@ -29,7 +29,7 @@ public class SupervisiorServiceImpl implements WorkerService {
     }
 
     @Override
-    public Client sellTicketToClient(Client client, Ticket ticket) throws Exception{
+    public Client sellTicketToClient(Client client, Ticket ticket) throws Exception {
         Client clientCustomer = this.getClient(client);
         clientCustomer.addNewTicket(ticket);
         DB.deleteClientFromList(client);
