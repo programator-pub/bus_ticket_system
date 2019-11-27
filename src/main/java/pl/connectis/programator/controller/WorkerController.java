@@ -23,10 +23,10 @@ public class WorkerController {
         return ResponseEntity.ok(this.supervisiorService.registerClient(firstName, secondName));
     }
 
-//    @PostMapping("/register1")
-//    public ResponseEntity<Client> registerNewClient(@RequestBody Client client) {
-//        return ResponseEntity.ok(this.supervisiorService.registerClient(client.getFirstName(), client.getSecondName()));
-//    }
+    @PostMapping("/register1")
+    public ResponseEntity<Client> registerNewClient(@RequestBody Client client) {
+        return ResponseEntity.ok(this.supervisiorService.registerClient(client.getFirstName(), client.getSecondName()));
+    }
 
     @GetMapping("/list")
     public ResponseEntity<List<Client>> getAllClients() {

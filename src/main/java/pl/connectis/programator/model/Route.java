@@ -1,16 +1,19 @@
 package pl.connectis.programator.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Duration;
 
 public class Route {
 
     private BigDecimal price;
     private String start;
     private String destination;
-    private LocalDateTime tripDuration;
+    private Duration tripDuration;
 
-    public Route(BigDecimal price, String start, String destination, LocalDateTime tripDuration) {
+    public Route() {
+    }
+
+    public Route(BigDecimal price, String start, String destination, Duration tripDuration) {
         this.price = price;
         this.start = start;
         this.destination = destination;
@@ -29,8 +32,24 @@ public class Route {
         return destination;
     }
 
-    public LocalDateTime getTripDuration() {
+    public Duration getTripDuration() {
         return tripDuration;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public void setTripDuration(Duration tripDuration) {
+        this.tripDuration = tripDuration;
     }
 
     @Override

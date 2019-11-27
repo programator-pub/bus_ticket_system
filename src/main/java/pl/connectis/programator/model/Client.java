@@ -11,11 +11,22 @@ public class Client {
     private String secondName;
     private List<Ticket> tickets;
 
+    public Client() {
+        this.id = UUUGenerator.getNextClientId();
+    }
+
     public Client(String firstName, String secondName) {
         this.id = UUUGenerator.getNextClientId();
         this.firstName = firstName;
         this.secondName = secondName;
         this.tickets = new ArrayList<>();
+    }
+
+    public Client(String firstName, String secondName, Ticket ticket) {
+        this.id = UUUGenerator.getNextClientId();
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.tickets.add(ticket);
     }
 
     public long getId() {
@@ -36,6 +47,10 @@ public class Client {
 
     public void setTickets(List<Ticket> tickets) {
         this.tickets.addAll(tickets);
+    }
+
+    public void setTickets(Ticket ticket) {
+        this.tickets.add(ticket);
     }
 
     public void addNewTicket(Ticket ticket) {

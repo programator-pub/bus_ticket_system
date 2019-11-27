@@ -5,6 +5,7 @@ import pl.connectis.programator.model.Route;
 import pl.connectis.programator.model.Ticket;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public interface WorkerService {
 
     List<Client> getAllClients();
 
-    Route addNewRoute(BigDecimal price, String start, String destination, LocalDateTime tripDuration);
+    Route addNewRoute(BigDecimal price, String start, String destination, Duration tripDuration);
 
 
 }

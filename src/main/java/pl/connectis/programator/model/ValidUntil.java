@@ -10,11 +10,18 @@ public enum ValidUntil {
 
     private LocalDateTime validUntil;
 
+    ValidUntil() {
+    }
+
     ValidUntil(LocalDateTime validUntil) {
         this.validUntil = validUntil;
     }
 
     public LocalDateTime getValidUntil() {
         return validUntil;
+    }
+
+    public void setValidUntil(LocalDateTime validUntil) {
+        this.validUntil = validUntil;
     }
 }

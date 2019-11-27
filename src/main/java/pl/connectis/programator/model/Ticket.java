@@ -13,11 +13,31 @@ public class Ticket {
     private LocalDateTime validUntil;
     private Route route;
 
+    public Ticket() {
+        this.id = UUUGenerator.getNextTicketId();
+    }
+
     public Ticket(TicketType type, ValidUntil validUntil, Route route) {
         this.id = UUUGenerator.getNextTicketId();
         this.type = type;
         this.price = route.getPrice().multiply(new BigDecimal(type.getDiscount()));
         this.validUntil = validUntil.getValidUntil();
+        this.route = route;
+    }
+
+    public void setType(TicketType type) {
+        this.type = type;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setValidUntil(LocalDateTime validUntil) {
+        this.validUntil = validUntil;
+    }
+
+    public void setRoute(Route route) {
         this.route = route;
     }
 

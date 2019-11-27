@@ -4,6 +4,8 @@ import pl.connectis.programator.dao.DB;
 import pl.connectis.programator.model.Client;
 import pl.connectis.programator.model.Ticket;
 
+import java.util.List;
+
 public class ClientServiceImpl {
 
     public Client buyTicket(Client client, Ticket ticket) throws Exception{
@@ -20,4 +22,9 @@ public class ClientServiceImpl {
                 .orElseThrow(() -> new Exception("Client not found"));
         return dbClient;
     }
+
+    public List<Client> getAll() {
+        return DB.getClientList();
+    }
+
 }
